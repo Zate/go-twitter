@@ -33,6 +33,7 @@ func NewClient(httpClient *http.Client) *Client {
 	return &Client{
 		sling:          base,
 		Accounts:       newAccountService(base.New()),
+		Block:          newBlockService(base.New()),
 		DirectMessages: newDirectMessageService(base.New()),
 		Favorites:      newFavoriteService(base.New()),
 		Followers:      newFollowerService(base.New()),
