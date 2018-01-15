@@ -13,6 +13,7 @@ type Client struct {
 	sling *sling.Sling
 	// Twitter API Services
 	Accounts       *AccountService
+	Block          *BlockService
 	DirectMessages *DirectMessageService
 	Favorites      *FavoriteService
 	Followers      *FollowerService

@@ -65,6 +65,5 @@ application auth.
 	client := twitter.NewClient(httpClient)
 
 To implement Login with Twitter, see https://github.com/dghubble/gologin.
-
 */
 package twitter

@@ -55,7 +55,7 @@ type User struct {
 	WithholdScope                  string        `json:"withheld_scope"`
 }
 
-// UserService provides methods for accessing Twitter user API endpoints.
+// UserService protvides methods for accessing Twitter user API endpoints.
 type UserService struct {
 	sling *sling.Sling
 }
