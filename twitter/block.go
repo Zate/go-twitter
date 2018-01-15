@@ -60,8 +60,8 @@ type BlockService struct {
 	sling *sling.Sling
 }
 
-// newBlockService returns a new BlockService.
-func newBlockService(sling *sling.Sling) *BlockService {
+// NewBlockService returns a new BlockService.
+func NewBlockService(sling *sling.Sling) *BlockService {
 	return &BlockService{
 		sling: sling.Path("blocks/"),
 	}
