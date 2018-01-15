@@ -79,7 +79,7 @@ type BlockUserParams struct {
 func (s *BlockService) Create(params *BlockUserParams) (*User, *http.Response, error) {
 	user := new(User)
 	apiError := new(APIError)
-	resp, err := s.sling.New().Post("create.json").QueryStruct(params).Receive(user, apiError)
+	resp, err := s.sling.New().Get("create.json").QueryStruct(params).Receive(user, apiError)
 	return user, resp, relevantError(err, *apiError)
 }
 
@@ -87,6 +87,6 @@ func (s *BlockService) Create(params *BlockUserParams) (*User, *http.Response, e
 func (s *BlockService) Destroy(params *BlockUserParams) (*User, *http.Response, error) {
 	user := new(User)
 	apiError := new(APIError)
-	resp, err := s.sling.New().Post("destroy.json").QueryStruct(params).Receive(user, apiError)
+	resp, err := s.sling.New().Get("destroy.json").QueryStruct(params).Receive(user, apiError)
 	return user, resp, relevantError(err, *apiError)
 }
